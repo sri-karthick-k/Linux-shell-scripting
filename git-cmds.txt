@@ -1,0 +1,26 @@
+git init						# Initialize local git repo
+
+
+git add file1.ext file2.ext		# adds the file to local repository
+git add .				# adds all files in directory to local repo
+
+
+git commit -m "Some message regarding changes" 		# Commits the changes to local repo with message
+
+
+git status 						# View current status of the repo
+
+# Red coloured filename for untracked
+# green coloured filename for unstaged 
+
+
+git push -u origin branch-name				# pushes the code to Remote repo
+
+
+# Sometimes you need to set the remote origin to the repository link if the repo is not cloned
+
+git remote add origin linkOfTheRepo			# The link of the repo looks like this for ssh: git@github.com:username/repo.git
+
+
+
+
