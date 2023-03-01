@@ -1,25 +1,74 @@
 git init						# Initialize local git repo
 
+---------------------------------------------------------------------------------------------------------------------
 
 git add file1.ext file2.ext		# adds the file to local repository
 git add .				# adds all files in directory to local repo
 
 
+# Undo git add 
+
+git restore --staged filename
+---------------------------------------------------------------------------------------------------------------------
+
 git commit -m "Some message regarding changes" 		# Commits the changes to local repo with message
 
-
+---------------------------------------------------------------------------------------------------------------------
 git status 						# View current status of the repo
 
 # Red coloured filename for untracked
 # green coloured filename for unstaged 
 
+---------------------------------------------------------------------------------------------------------------------
 
 git push -u origin branch-name				# pushes the code to Remote repo
 
+# give username (Note that it should be username of github account)
+# give password (Note that this password is not what you use for logging in github.com, this is the Personal Access Token that can be generated in github 
+settings > Developer settings > Personal Access Token > 
+Tokens (classic) > Generate New Token(classic) > 
+choose options as required for your usage and note down or copy the newly generated token in some file securely. 
+
+It looks something like this: ghp_skjdngkjnadkjgnjangjajgnsadnjjn. 
+This is what you need to use as password when prompted for 
+pushing the commits to remote repo
+
+---------------------------------------------------------------------------------------------------------------------
 
 # Sometimes you need to set the remote origin to the repository link if the repo is not cloned
 
 git remote add origin linkOfTheRepo			# The link of the repo looks like this for ssh: git@github.com:username/repo.git
+
+---------------------------------------------------------------------------------------------------------------------
+# For cloning the repo use:
+
+git clone LinkOfRepo					# The link of the repo looks like this for https: https://github.com/username/repo.git
+
+---------------------------------------------------------------------------------------------------------------------
+# See the previous commits done by you in current system for any repo using
+
+git log
+
+git log --oneline
+
+#filter
+git log -n						#  Where n is the number of recent logs to be shown
+
+git log --author="XYZ"					#  Filters the git commits done by XYZ author only
+
+git log --before="YYYY-MM-DD"				#  Filters the git commits done before the specified date in format
+
+git log --after="YYYY-MM-DD"				#  Filters the git commits done after the specified date in format 
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
